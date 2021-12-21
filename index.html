@@ -1,104 +1,171 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Add icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Add icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
 
-.input-container {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  width: 100%;
-  margin-bottom: 15px;
-}
+      .input-container {
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        width: 100%;
+        margin-bottom: 15px;
+      }
 
+      .icon {
+        padding: 10px;
+        background: white;
+        color: black;
+        min-width: 30px;
+        text-align: center;
+      }
 
-.icon {
-  padding: 10px;
-  background: white;
-  color: grey;
-  min-width: 30px;
-  text-align: center;
-  border-left: 1px solid grey;  
-  border-right: 0px;  
-  border-bottom: 1px solid grey;  
-  border-top: 1px solid grey;
-}
+      .border-top-bottom {
+        border-bottom: 1px solid grey;
+        border-top: 1px solid grey;
+      }
 
-.border-right{
-	border-right: 1px solid grey;
-}
+      .border-right {
+        border-right: 1px solid grey;
+      }
 
-.border-right-none{
-	border-right: 0px;
-}
+      .border-right-none {
+        border-right: 0px;
+      }
 
-.border-left{
-	border-left: 1px solid grey;
-}
+      .border-left {
+        border-left: 1px solid grey;
+      }
 
-.border-left-none{
-	border-left: 0px;
-}
+      .border-left-none {
+        border-left: 0px;
+      }
 
+      .input-field {
+        width: 100%;
+        padding: 10px;
+        outline: none;
+      }
 
-.input-field {
-  width: 100%;
-  padding: 10px;
-  outline: none;  
-  border-bottom: 1px solid grey;  
-  border-top: 1px solid grey;    
-}
-
-.input-field:focus {
-  /*border: 1px solid dodgerblue;  
+      .input-field:focus {
+        /*border: 1px solid dodgerblue;  
   border-right: 1px solid grey;  
-  border-bottom: 1px solid grey;  */  
-}
+  border-bottom: 1px solid grey;  */
+      }
 
-/* Set a style for the submit button */
-.btn {
-  background-color: dodgerblue;
-  color: white;
-  padding: 15px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
+      /* Set a style for the submit button */
+      .btn {
+        background-color: dodgerblue;
+        color: white;
+        padding: 15px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+      }
 
-.btn:hover {
-  opacity: 1;
-}
-</style>
-</head>
-<body>
+      .btn:hover {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/action_page.php" style="max-width: 500px; margin: auto">
+      <h2>Register Form</h2>
+      <div class="input-container">
+        <i
+          class="
+            fa fa-search
+            icon
+            border-top-bottom border-right-none border-left
+          "
+        ></i>
+        <input
+          class="
+            input-field
+            border-top-bottom border-left-none border-right-none
+          "
+          type="text"
+          placeholder="Username"
+          name="usrnm"
+        />
+        <i
+          class="
+            fa fa-angle-down
+            border-top-bottom
+            icon
+            border-left-none border-right
+          "
+        ></i>
+      </div>
 
-<form action="/action_page.php" style="max-width:500px;margin:auto">
-  <h2>Register Form</h2>
-  <div class="input-container">
-    <i class="fa fa-search icon border-right-none border-left"></i>
-    <input class="input-field border-left-none border-right-none" type="text" placeholder="Username" name="usrnm">
-    <i class="fa fa-angle-down icon border-left-none border-right"></i>
-  </div>
-  
-  <div class="input-container">
-    <i class="fa fa-search icon border-right-none border-left"></i>
-    <input class="input-field border-left-none border-right-none" type="text" placeholder="Email" name="email">
-    <i class="fa fa-angle-down icon border-left-none border-right"></i>
-  </div>
-  
-  <div class="input-container">
-    <i class="fa fa-search icon border-right-none border-left"></i>
-    <input class="input-field border-left-none border-right-none" type="text" type="password" placeholder="Password" name="psw">
-    <i class="fa fa-angle-down icon border-left-none border-right"></i>
-  </div>
+      <div class="input-container">
+        <i
+          class="
+            fa fa-search
+            icon
+            border-top-bottom border-right-none border-left
+          "
+        ></i>
+        <input
+          class="
+            input-field
+            border-top-bottom border-left-none border-right-none
+          "
+          type="text"
+          placeholder="Email"
+          name="email"
+        />
+        <i
+          class="
+            fa fa-angle-down
+            border-top-bottom
+            icon
+            border-left-none border-right
+          "
+        ></i>
+      </div>
 
-  <button type="submit" class="btn">Register</button>
-</form>
+      <div class="input-container">
+        <i
+          class="
+            fa fa-search
+            border-top-bottom
+            icon
+            border-right-none border-left
+          "
+        ></i>
+        <input
+          class="
+            input-field
+            border-top-bottom border-left-none border-right-none
+          "
+          type="text"
+          type="password"
+          placeholder="Password"
+          name="psw"
+        />
+        <i
+          class="
+            fa fa-angle-down
+            border-top-bottom
+            icon
+            border-left-none border-right
+          "
+        ></i>
+      </div>
 
-</body>
+      <button type="submit" class="btn">Register</button>
+    </form>
+  </body>
 </html>
